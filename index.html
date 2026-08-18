@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A cinematic platform for AI-created historical films and reconstructions." />
+  <title>Chronicle AI | History Brought to Life</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Chronicle AI home">
+      <span class="brand-mark">C</span>
+      <span>Chronicle AI</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#films">Films</a>
+      <a href="#eras">Eras</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-button" id="searchToggle" aria-label="Open search">⌕</button>
+      <a class="admin-link" href="#creator">Creator Studio</a>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="eyebrow">AI HISTORICAL RECONSTRUCTION</div>
+        <h1 id="hero-title">History was never meant to stay still.</h1>
+        <p>
+          Cinematic AI films that reconstruct the people, places, and moments that shaped the world.
+        </p>
+        <div class="hero-actions">
+          <button class="primary-button" data-play="The Cornfield at Antietam">▶ Watch Featured Film</button>
+          <a class="secondary-button" href="#films">Browse Library</a>
+        </div>
+      </div>
+      <div class="hero-meta">
+        <span>FEATURED</span>
+        <strong>The Cornfield at Antietam</strong>
+        <span>1862 · American Civil War · 8 min</span>
+      </div>
+    </section>
+
+    <section class="search-panel" id="searchPanel" aria-hidden="true">
+      <div class="section-shell search-shell">
+        <label for="filmSearch">Search films, people, places, or eras</label>
+        <div class="search-box">
+          <input id="filmSearch" type="search" placeholder="Try “Gettysburg”, “Rome”, or “1944”" autocomplete="off" />
+          <button id="clearSearch" type="button">Clear</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="films">
+      <div class="section-shell">
+        <div class="section-heading-row">
+          <div>
+            <span class="section-kicker">WATCH</span>
+            <h2>Featured reconstructions</h2>
+          </div>
+          <div class="filter-row" aria-label="Film filters">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="war">War</button>
+            <button class="filter" data-filter="daily-life">Daily Life</button>
+            <button class="filter" data-filter="politics">Politics</button>
+          </div>
+        </div>
+
+        <div class="film-grid" id="filmGrid">
+          <article class="film-card" data-category="war" data-search="antietam civil war 1862 maryland cornfield union confederate">
+            <button class="poster poster-antietam" data-play="The Cornfield at Antietam" aria-label="Watch The Cornfield at Antietam">
+              <span class="play-badge">▶</span>
+              <span class="runtime">8:12</span>
+            </button>
+            <div class="film-card-copy">
+              <span class="film-label">AI RECONSTRUCTION</span>
+              <h3>The Cornfield at Antietam</h3>
+              <p>September 17, 1862 · Sharpsburg, Maryland</p>
+            </div>
+          </article>
+
+          <article class="film-card" data-category="daily-life" data-search="rome roman empire daily life forum 117 ad ancient">
+            <button class="poster poster-rome" data-play="A Morning in Imperial Rome" aria-label="Watch A Morning in Imperial Rome">
+              <span class="play-badge">▶</span>
+              <span class="runtime">4:47</span>
+            </button>
+            <div class="film-card-copy">
+              <span class="film-label">DAILY LIFE</span>
+              <h3>A Morning in Imperial Rome</h3>
+              <p>c. 117 AD · Rome, Roman Empire</p>
+            </div>
+          </article>
+
+          <article class="film-card" data-category="politics" data-search="washington inauguration 1789 new york federal hall george washington">
+            <button class="poster poster-washington" data-play="Washington Takes the Oath" aria-label="Watch Washington Takes the Oath">
+              <span class="play-badge">▶</span>
+              <span class="runtime">6:21</span>
+            </button>
+            <div class="film-card-copy">
+              <span class="film-label">FOUNDING ERA</span>
+              <h3>Washington Takes the Oath</h3>
+              <p>April 30, 1789 · New York City</p>
+            </div>
+          </article>
+
+          <article class="film-card" data-category="war" data-search="normandy d-day omaha beach 1944 world war ii ww2">
+            <button class="poster poster-normandy" data-play="Omaha Beach: First Light" aria-label="Watch Omaha Beach: First Light">
+              <span class="play-badge">▶</span>
+              <span class="runtime">10:03</span>
+            </button>
+            <div class="film-card-copy">
+              <span class="film-label">WORLD WAR II</span>
+              <h3>Omaha Beach: First Light</h3>
+              <p>June 6, 1944 · Normandy, France</p>
+            </div>
+          </article>
+
+          <article class="film-card" data-category="daily-life" data-search="new york city 1900 manhattan daily life gilded age street">
+            <button class="poster poster-nyc" data-play="New York, 1900" aria-label="Watch New York, 1900">
+              <span class="play-badge">▶</span>
+              <span class="runtime">3:58</span>
+            </button>
+            <div class="film-card-copy">
+              <span class="film-label">CITY LIFE</span>
+              <h3>New York, 1900</h3>
+              <p>1900 · Manhattan, New York</p>
+            </div>
+          </article>
+
+          <article class="film-card" data-category="war" data-search="waterloo napoleon 1815 france britain battle">
+            <button class="poster poster-waterloo" data-play="Waterloo: The Final Assault" aria-label="Watch Waterloo: The Final Assault">
+              <span class="play-badge">▶</span>
+              <span class="runtime">7:36</span>
+            </button>
+            <div class="film-card-copy">
+              <span class="film-label">NAPOLEONIC WARS</span>
+              <h3>Waterloo: The Final Assault</h3>
+              <p>June 18, 1815 · Waterloo</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="empty-state" id="emptyState" hidden>No films match that search yet.</p>
+      </div>
+    </section>
+
+    <section class="era-section" id="eras">
+      <div class="section-shell">
+        <span class="section-kicker">EXPLORE</span>
+        <h2>Travel through the eras</h2>
+        <div class="era-grid">
+          <button class="era-card" data-era="Ancient World"><span>Ancient World</span><small>3000 BC–500 AD</small></button>
+          <button class="era-card" data-era="Medieval"><span>Medieval</span><small>500–1500</small></button>
+          <button class="era-card" data-era="Early Modern"><span>Early Modern</span><small>1500–1800</small></button>
+          <button class="era-card" data-era="19th Century"><span>19th Century</span><small>1800–1900</small></button>
+          <button class="era-card" data-era="20th Century"><span>20th Century</span><small>1900–2000</small></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="section-shell about-grid">
+        <div>
+          <span class="section-kicker">OUR APPROACH</span>
+          <h2>Reconstruction, with the seams visible.</h2>
+        </div>
+        <div class="about-copy">
+          <p>
+            Chronicle AI is designed for historically grounded films created with artificial intelligence. Each production can separate documented facts from plausible reconstruction and narrative dramatization.
+          </p>
+          <div class="confidence-list">
+            <div><span class="dot documented"></span><strong>Documented</strong><small>Supported directly by historical evidence.</small></div>
+            <div><span class="dot reconstructed"></span><strong>Reconstructed</strong><small>Plausible interpretation based on available evidence.</small></div>
+            <div><span class="dot dramatized"></span><strong>Dramatized</strong><small>Narrative material created to connect the story.</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="creator-section" id="creator">
+      <div class="section-shell creator-panel">
+        <div>
+          <span class="section-kicker">CREATOR STUDIO</span>
+          <h2>Publish your next historical film.</h2>
+          <p>This prototype includes the foundation for a private publishing dashboard. In the production version, this is where you’ll upload videos, thumbnails, descriptions, dates, locations, sources, and reconstruction notes.</p>
+        </div>
+        <button class="primary-button" id="openCreator">Open Studio Preview</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-shell footer-row">
+      <div class="brand footer-brand"><span class="brand-mark">C</span><span>Chronicle AI</span></div>
+      <p>History, reconstructed responsibly.</p>
+      <span>Prototype v1</span>
+    </div>
+  </footer>
+
+  <dialog id="videoModal" class="modal">
+    <button class="modal-close" data-close-modal aria-label="Close">×</button>
+    <div class="video-placeholder">
+      <div class="video-placeholder-icon">▶</div>
+      <p>Video player placeholder</p>
+      <small>Connect your hosted video here in the production build.</small>
+    </div>
+    <div class="modal-copy">
+      <span class="film-label">AI HISTORICAL RECONSTRUCTION</span>
+      <h2 id="modalTitle">Film title</h2>
+      <p>This is the future watch page experience. It will include the film, historical context, reconstruction notes, and source citations.</p>
+    </div>
+  </dialog>
+
+  <dialog id="creatorModal" class="modal creator-modal">
+    <button class="modal-close" data-close-creator aria-label="Close">×</button>
+    <div class="studio-header">
+      <span class="film-label">PRIVATE DASHBOARD PREVIEW</span>
+      <h2>New Production</h2>
+      <p>The fields below are a front-end preview only. Saving to a database comes in the next build step.</p>
+    </div>
+    <form id="creatorForm" class="creator-form">
+      <label>Title<input name="title" placeholder="The Morning at Gettysburg" required /></label>
+      <div class="two-col">
+        <label>Historical date<input name="date" placeholder="July 1, 1863" /></label>
+        <label>Location<input name="location" placeholder="Gettysburg, Pennsylvania" /></label>
+      </div>
+      <label>Description<textarea name="description" rows="4" placeholder="A short synopsis of the film..."></textarea></label>
+      <label>Sources<textarea name="sources" rows="4" placeholder="Books, letters, archives, maps, articles..."></textarea></label>
+      <label>Video file<input name="video" type="file" accept="video/*" /></label>
+      <button class="primary-button" type="submit">Save Draft</button>
+      <p class="form-status" id="formStatus" role="status"></p>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
